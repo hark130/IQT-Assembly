@@ -1,4 +1,4 @@
-# Section 1: Introduction to Assembly Programming
+# Introduction to Assembly Programming
 
 ```nasm
 content:
