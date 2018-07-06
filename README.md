@@ -14,6 +14,7 @@ This course is intended for students who currently require it. Much of this cour
 - Text Editor (Visual Studio Code, VIM/Vi, Atom, Sublime Text, etc)
 
 ### TODO: 
+* Move "Structures" from ch1 to another chapter
 * Convert slides to markdown (CH1 fully converted)
 * Update Chapter 6, 7 and 9
 * Clean up structure
