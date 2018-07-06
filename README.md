@@ -4,16 +4,17 @@ This course is intended for students who currently require it. Much of this cour
 ![image](imgs/2fc.png)
 ### REQUIRMENTS
 - C/C++ Programming Knowledge
-- Linux Distro (Manjaro is used for this course)
+- Linux Distro (Fedora is used for this course)
 - Windows 10
 - CMAKE
 - GDB
 - NASM
 - GCC/G++
 - WinDBG
+- Text Editor (Visual Studio Code, VIM/Vi, Atom, Sublime Text, etc)
 
 ### TODO: 
-* Convert slides to markdown 
+* Move "Structures" from ch1 to another chapter
+* Convert slides to markdown (CH1 fully converted)
 * Update Chapter 6, 7 and 9
 * Clean up structure
-* Look into new Ubuntu LTS (check C-Library on Ubuntu)
