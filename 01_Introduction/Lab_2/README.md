@@ -6,7 +6,7 @@
     * Build and run using the following commands:
 
 ```
-cd ~/path/to/copied/folder/Lab1 
+cd ~/path/to/copied/folder/Lab2
 cmake . && cmake --build .
-./lab1
+./lab2
 ```
