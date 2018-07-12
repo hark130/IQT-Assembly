@@ -1,0 +1,29 @@
+# The Stack
+
+## ATTENTION:
+#### This can be a challanging concept to grasp. You need to be entirely open minded when entering this section. Many concepts go against the flow of logic. 
+
+---
+
+### What is the Stack?
+The stack is a linear data structure which follows a particular order in which operations are performed. Think of the stack as concept that keeps track of which operation to run next as well as previous operations (if needed) to allow for returns and such. 
+
+* The Stack grows from high memory addresses to low memory addresses
+* When looking at a stack graphic, the top of the photo is the bottom of the stack (higher addresses), in which the stack grows down into lower addresses. 
+* The current function typically exists within a stack "frame" (but now always) 
+
+### Stack Frames
+A stack frame is a related piece of data that gets pushed onto the greater stack. A stack frame often represents a function call and it's argument data. We will be getting into much more detail in chapter 3 about how the stack frame works. 
+
+#### Registers
+* Stack Pointer - RSP (or ESP) points to the top of the **stack** 
+* Base Pointer - RBP (or EBP) points to the "base" of the stack **frame**
+
+![](/imgs/stack1.png)
+
+| **ADDRESS** | **VALUE/REG** |
+| :--- | :--- |
+| 0x0018 | RBP |
+| 0x0010 | 0x0000 |
+| 0x0008 | 0x0000 |
+| 0x0000 | RSP |
