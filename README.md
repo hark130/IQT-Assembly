@@ -18,7 +18,6 @@ Please use the Powerpoint slides under the "backup\_slides" directory. The markd
 - Text Editor (Visual Studio Code, VIM/Vi, Atom, Sublime Text, etc)
 
 ### TODO: 
-* Move "Structures" from ch1 to another chapter
-* Convert slides to markdown (CH1 fully converted)
+* Convert slides to markdown (CH1-3 fully converted)
 * Update Chapter 6, 7 and 9
 * Clean up structure
