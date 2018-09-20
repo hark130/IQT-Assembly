@@ -1,0 +1,498 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Debugging ASM Part 1 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="01.4_DataTypesANDDebugging_pt2.html" />
+    
+    
+    <link rel="prev" href="01.2_Asm_Basics.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    IQT Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Assembly Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01.1_Computer_Basics.html">
+            
+                <a href="01.1_Computer_Basics.html">
+            
+                    
+                    Computer Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="01.2_Asm_Basics.html">
+            
+                <a href="01.2_Asm_Basics.html">
+            
+                    
+                    ASM Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="01.3_Debugging_ASM_pt1.html">
+            
+                <a href="01.3_Debugging_ASM_pt1.html">
+            
+                    
+                    Debugging ASM Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="01.4_DataTypesANDDebugging_pt2.html">
+            
+                <a href="01.4_DataTypesANDDebugging_pt2.html">
+            
+                    
+                    Data Types and Debugging Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="01.5_Adv_Types.html">
+            
+                <a href="01.5_Adv_Types.html">
+            
+                    
+                    Advanced Types and Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02_Basic_Operations/">
+            
+                <a href="../02_Basic_Operations/">
+            
+                    
+                    Basic Operations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02_Basic_Operations/02.1_Arithmetic_Instructions.html">
+            
+                <a href="../02_Basic_Operations/02.1_Arithmetic_Instructions.html">
+            
+                    
+                    Arithmetic Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02_Basic_Operations/02.2_The_Stack.html">
+            
+                <a href="../02_Basic_Operations/02.2_The_Stack.html">
+            
+                    
+                    The Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02_Basic_Operations/02.3_negative_bitwise.html">
+            
+                <a href="../02_Basic_Operations/02.3_negative_bitwise.html">
+            
+                    
+                    Negative Numbers Bitwise
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03_Control_Flow/">
+            
+                <a href="../03_Control_Flow/">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_Control_Flow/3.1_Flags.html">
+            
+                <a href="../03_Control_Flow/3.1_Flags.html">
+            
+                    
+                    Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                <a href="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Debugging ASM Part 1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="section-13-debugging-assembly-pt-1--making-the-files">Section 1.3: Debugging Assembly (pt 1) &amp; Making the Files</h1>
+<p><img src="../imgs/gdb4.png" alt=""></p>
+<h2 id="why-debug-assembly">Why Debug Assembly?</h2>
+<p>Unlike many other programming languages, assembly allows for much more control over lower level software/hardware. We will be making changes that are much harder to track mentally. Debugging allows us to see the memory itself, registers, etc. Some debugging tools even allow us to modify said registers and memory values. </p>
+<p>We will be using the GNU Project Debugger or <strong>GDB</strong> for short while in Linux. GDB is a command line debugger which provides a large set of features:</p>
+<ul>
+<li>Natively supports Python scripting</li>
+<li>Supports a large number of architectures (and even quite a few languages)</li>
+<li>Provides a Text User Interface (TUI) mode</li>
+</ul>
+<h2 id="how-to-debug-using-assembly">How to Debug using Assembly</h2>
+<h3 id="preconfiguration">Preconfiguration</h3>
+<p>When launching GDB, you may notice your interface does not look like mine. This is because I use a configuration file that adds customization to my interface. Lucky for you, we provided you with a preconfiguration file. The <strong>gdbinit</strong> providese a way to run a number of setup commands at launch. You will just need to copy the config file to your home directory:</p>
+<pre><code>cp ~/path/to/repo/handouts/sample![](/imgs/gdb1.png)![](/imgs/gdb1.png)-gdbinit ~/.gdbinit
+</code></pre><p><em>The instructions above will copy the sample gdbinit to your home directory as a hidden file (as directed by the . in front of the name) and will rename it to gdbinit</em></p>
+<h3 id="make-the-files">Make the Files</h3>
+<p><img src="../imgs/build.png" alt="">
+After you have written your code, you will need to cd to the path and run a series of commands to make the files. </p>
+<p>Change Dirs to proper lab:</p>
+<pre><code>cd ~/path/to/lab1/
+</code></pre><p>Make the files (DO NOT FORGET THE PERIODS!):</p>
+<pre><code>cmake . &amp;&amp; cmake --build .
+</code></pre><p><em>There is a file in the lab directory called CMakeLists.txt. This file instructs/configures a program build tool called <strong>CMAKE</strong> to build the nasm and cpp file and output an executable. If you peek inside of the cpp file, you will notice a couple of things. First, we &quot;extern&quot; some functions. This allows us to create a link of sort between the nasm and cpp file. We then later call <img src="../imgs/gdb1.png" alt="">the extern&apos;d function in main (or some other function) as if it were a regular function. If you don&apos;t understand how the <img src="../imgs/gdb1.png" alt="">C/C++ compiler and linker work, feel free to ask for a refresher and I will provide one given we have time.</em><img src="../imgs/gdb1.png" alt="">
+<img src="../imgs/gdb1.png" alt=""></p>
+<h3 id="launching-an-executable-with-gdb">Launching an Executable with GDB</h3>
+<ol>
+<li>CD to directory containing lab</li>
+<li>run: gdb labx (x being the lab number)</li>
+<li>In the GDB window, type &quot;run&quot; to execute the program. The program will run all the way through because there are no break points. </li>
+<li>In the GDB window, type &quot;quit&quot; to quit GDB. You will be returned to the standard terminal. 
+```
+$ cd ~/path/to/lab1
+$ gdb lab1</li>
+</ol>
+<p>(gdb) run
+...
+(gdb) quit</p>
+<pre><code>
+### Basic Usage
+* **info (command)** : displays information (in general, or about a specific command)
+* **help (command)** : can provide context-specific help; t.g., listing avaliable commands/options
+* **refresh** : will redraw the console window (very important)
+
+### Breakpoints (break)
+Using breakpoints allows us to programmatically set breakpoints without modifying application source code. We can set breakpoints on memory addresses, symbols (such as funciton names), etc. 
+* **break (location)** : will create a breakpoint at the location. 
+* **info break** : shows us information about all currently set breakpoints
+* **clear** or **delete** : Allows us to remove breakpoints
+
+#### Example:
+</code></pre><p>(gdb) break myfunc
+Breakpoint 1 at 0x4004a4
+Num     Type       Disp     Enb     Addreses
+1       Breakpoint  keep    y       0x00000000004004a4
+(gdb) delete 1
+(deb info break)
+No breakpoints or watchpoints</p>
+<pre><code>
+Setting breakpoints programmatically as shown above, may sometimes be difficult. A good strategy may include applying breakpoints directly in your code for debugging purposes. Fortunately, an assembly instruction exists for doing just this!
+```nasm
+int3;   NOTE: no space between int and 3
+</code></pre><p>Which translates to the opcode:</p>
+<pre><code class="lang-nasm">0xcc
+</code></pre>
+<p><em>By placing the above in your code, the debugger will be interrupted on run and will automatically wait for the user to continue the program or start stepping before continuing.</em></p>
+<h3 id="instructions">Instructions</h3>
+<ul>
+<li><strong>step/s</strong> : Single stepping (can also use <strong>stepi</strong>)</li>
+<li><strong>next/n</strong> : Stepping Over (can also use <strong>nexti</strong>)</li>
+<li><strong>continue</strong> : continue normal execution (you can also create another breakpoint and continue to it)</li>
+<li><strong>finish</strong> : Continue until the current function returns</li>
+</ul>
+<h2 id="additonal-resources">Additonal Resources</h2>
+<ul>
+<li><a href="http://www.yolinux.com/TUTORIALS/GDB-Commands.html" target="_blank">GDB Cheatsheet</a></li>
+</ul>
+<h2 id="lab1">Lab1</h2>
+<p>Proceed to the Lab1 directory and follow instructions</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01.2_Asm_Basics.html" class="navigation navigation-prev " aria-label="Previous page: ASM Basics">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="01.4_DataTypesANDDebugging_pt2.html" class="navigation navigation-next " aria-label="Next page: Data Types and Debugging Part 2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Debugging ASM Part 1","level":"1.2.3","depth":2,"next":{"title":"Data Types and Debugging Part 2","level":"1.2.4","depth":2,"path":"01_Introduction/01.4_DataTypesANDDebugging_pt2.md","ref":"01_Introduction/01.4_DataTypesANDDebugging_pt2.md","articles":[]},"previous":{"title":"ASM Basics","level":"1.2.2","depth":2,"path":"01_Introduction/01.2_Asm_Basics.md","ref":"01_Introduction/01.2_Asm_Basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01_Introduction/01.3_Debugging_ASM_pt1.md","mtime":"2018-07-09T15:04:20.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T18:47:25.761Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

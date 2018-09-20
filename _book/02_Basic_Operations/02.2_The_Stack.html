@@ -1,0 +1,611 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>The Stack · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02.3_negative_bitwise.html" />
+    
+    
+    <link rel="prev" href="02.1_Arithmetic_Instructions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    IQT Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01_Introduction/">
+            
+                <a href="../01_Introduction/">
+            
+                    
+                    Assembly Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01_Introduction/01.1_Computer_Basics.html">
+            
+                <a href="../01_Introduction/01.1_Computer_Basics.html">
+            
+                    
+                    Computer Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01_Introduction/01.2_Asm_Basics.html">
+            
+                <a href="../01_Introduction/01.2_Asm_Basics.html">
+            
+                    
+                    ASM Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01_Introduction/01.3_Debugging_ASM_pt1.html">
+            
+                <a href="../01_Introduction/01.3_Debugging_ASM_pt1.html">
+            
+                    
+                    Debugging ASM Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01_Introduction/01.4_DataTypesANDDebugging_pt2.html">
+            
+                <a href="../01_Introduction/01.4_DataTypesANDDebugging_pt2.html">
+            
+                    
+                    Data Types and Debugging Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01_Introduction/01.5_Adv_Types.html">
+            
+                <a href="../01_Introduction/01.5_Adv_Types.html">
+            
+                    
+                    Advanced Types and Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Basic Operations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="02.1_Arithmetic_Instructions.html">
+            
+                <a href="02.1_Arithmetic_Instructions.html">
+            
+                    
+                    Arithmetic Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="02.2_The_Stack.html">
+            
+                <a href="02.2_The_Stack.html">
+            
+                    
+                    The Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="02.3_negative_bitwise.html">
+            
+                <a href="02.3_negative_bitwise.html">
+            
+                    
+                    Negative Numbers Bitwise
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03_Control_Flow/">
+            
+                <a href="../03_Control_Flow/">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_Control_Flow/3.1_Flags.html">
+            
+                <a href="../03_Control_Flow/3.1_Flags.html">
+            
+                    
+                    Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                <a href="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >The Stack</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="the-stack">The Stack</h1>
+<p><img src="../imgs/stack.jpg" alt=""></p>
+<h2 id="attention">ATTENTION:</h2>
+<h4 id="this-can-be-a-challanging-concept-to-grasp-you-need-to-be-entirely-open-minded-when-entering-this-section-many-concepts-go-against-the-flow-of-logic">This can be a challanging concept to grasp. You need to be entirely open minded when entering this section. Many concepts go against the flow of logic.</h4>
+<hr>
+<h2 id="what-is-the-stack">What is the Stack?</h2>
+<p>The stack is a linear data structure which follows a particular order in which operations are performed. Think of the stack as concept that keeps track of which operation to run next as well as previous operations (if needed) to allow for returns and such. </p>
+<ul>
+<li>The Stack grows from high memory addresses to low memory addresses</li>
+<li>When looking at a stack graphic, the top of the photo is the bottom of the stack (higher addresses), in which the stack grows down into lower addresses. </li>
+<li>The current function typically exists within a stack &quot;frame&quot; (but now always) </li>
+</ul>
+<h2 id="stack-frames">Stack Frames</h2>
+<p>A stack frame is a related piece of data that gets pushed onto the greater stack. A stack frame often represents a function call and it&apos;s argument data. We will be getting into much more detail in chapter 3 about how the stack frame works. </p>
+<h3 id="registers">Registers</h3>
+<ul>
+<li>Stack Pointer - RSP (or ESP) points to the top of the <strong>stack</strong> </li>
+<li>Base Pointer - RBP (or EBP) points to the &quot;base&quot; of the stack <strong>frame</strong><ul>
+<li>The base pointer is a location we use as reference to grab arguments and locals. </li>
+</ul>
+</li>
+</ul>
+<h3 id="stack-frame-layout">Stack Frame Layout</h3>
+<p><img src="../imgs/stack1.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>ADDRESS</strong></th>
+<th style="text-align:left"><strong>VALUE/REG</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0x0018</td>
+<td style="text-align:left">RBP</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0010</td>
+<td style="text-align:left">0x0000</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0008</td>
+<td style="text-align:left">0x0000</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0000</td>
+<td style="text-align:left">RSP</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lets-break-it-down-further">Let&apos;s break it down further...</h4>
+<p><img src="../imgs/stack2.png" alt=""></p>
+<ul>
+<li>The green represents function parameters</li>
+<li>The blue represents local variables</li>
+<li>The base pointer separates this for us, giving us a point in the stack frame to offset from in order to grab variables</li>
+<li>When working on a stack, the return address will always be EBP + 4</li>
+<li>On 64-bit architecture, we can actually access data with RSP and free up RBP as a general register. Though much more reliable than it&apos;s implementation in other architectures... it&apos;s still very hard to use. So for our purposes, we will be learning how to access data with RBP. And because it&apos;s the most common way to still do it. </li>
+<li>As we continue to modify the stack, RSP/ESP will always be moving. </li>
+</ul>
+<h3 id="expanding-the-stack-frame">Expanding the Stack Frame</h3>
+<p>We can modify the value of the RSP directly to allocate more stack space:</p>
+<pre><code class="lang-nasm">sub rsp, 16
+</code></pre>
+<p>But you must always ensure you clean up before the function returns:</p>
+<pre><code class="lang-nasm">add rsp, 16
+</code></pre>
+<p><em>In other words, what you take... you must give back</em></p>
+<h4 id="stack-alignment">Stack Alignment</h4>
+<ul>
+<li>x86_64 expects 16 byte stack alignment</li>
+<li>Allocating odd amounts of space can cause things to break</li>
+<li><em>Always</em> make sure you clean up your stack before returning. </li>
+</ul>
+<hr>
+<h3 id="gdb---stack-frames">GDB - Stack Frames</h3>
+<ul>
+<li>Examining the Call Stack (backtrace/bt)</li>
+<li>Frames and Information<ul>
+<li><strong>frame</strong> || f - Get information about the current frame</li>
+<li><strong>info args</strong> - Get information about function arguments</li>
+<li><strong>info locals</strong> - Get information about local variables</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="new-instructions-push-and-pop">New Instructions: Push and Pop</h2>
+<ul>
+<li><h3 id="description">Description:</h3>
+<ul>
+<li><strong>Push</strong> will subtract a pointer-width amount of space from RSP, and place the argument in the newly-allocated location. <strong>Pop</strong> performs the opposite action, storing the value just below RSP in the register provided, and adding a pointer-width amount to RSP. For every push, you will need to pop! It is important to pop in the opposite order in which you pushed. </li>
+</ul>
+</li>
+<li><p><strong>Basic Use:</strong></p>
+</li>
+</ul>
+<pre><code class="lang-nasm">.first_func
+    mov rax, 1
+    mov rdx, 10
+
+    push rax
+    push rdx
+
+    ; perform operations here
+
+    pop rdx
+    pop rax
+</code></pre>
+<hr>
+<h3 id="growing-the-stack">Growing the Stack</h3>
+<ul>
+<li>After a push operation:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>ADDRESS</strong></th>
+<th style="text-align:left"><strong>VALUE/REG</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0x0028</td>
+<td style="text-align:left">RBP</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0020</td>
+<td style="text-align:left">0x0000</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0018</td>
+<td style="text-align:left">0x0000</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0010</td>
+<td style="text-align:left">0x0000</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0008</td>
+<td style="text-align:left">Old RSP/Pushed Arg</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0000</td>
+<td style="text-align:left">New RSP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="restoring-the-stack">Restoring the Stack</h3>
+<ul>
+<li>After a pop operation:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>ADDRESS</strong></th>
+<th style="text-align:left"><strong>VALUE/REG</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0x0028</td>
+<td style="text-align:left">RBP</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0020</td>
+<td style="text-align:left">0x0000</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0018</td>
+<td style="text-align:left">0x0000</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0010</td>
+<td style="text-align:left">0x0000</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0008</td>
+<td style="text-align:left">RSP</td>
+</tr>
+<tr>
+<td style="text-align:left">0x0000</td>
+<td style="text-align:left">Old RSP/Popped Arg</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="lab-4">Lab 4</h1>
+<ul>
+<li>Proceed to performance Lab4</li>
+</ul>
+<p><img src="../imgs/002.gif" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02.1_Arithmetic_Instructions.html" class="navigation navigation-prev " aria-label="Previous page: Arithmetic Instructions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02.3_negative_bitwise.html" class="navigation navigation-next " aria-label="Next page: Negative Numbers Bitwise">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"The Stack","level":"1.3.2","depth":2,"next":{"title":"Negative Numbers Bitwise","level":"1.3.3","depth":2,"path":"02_Basic_Operations/02.3_negative_bitwise.md","ref":"02_Basic_Operations/02.3_negative_bitwise.md","articles":[]},"previous":{"title":"Arithmetic Instructions","level":"1.3.1","depth":2,"path":"02_Basic_Operations/02.1_Arithmetic_Instructions.md","ref":"02_Basic_Operations/02.1_Arithmetic_Instructions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02_Basic_Operations/02.2_The_Stack.md","mtime":"2018-08-02T18:30:18.137Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T18:47:25.761Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

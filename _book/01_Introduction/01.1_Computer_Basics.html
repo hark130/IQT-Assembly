@@ -1,0 +1,506 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Computer Basics · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="01.2_Asm_Basics.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    IQT Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Assembly Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="01.1_Computer_Basics.html">
+            
+                <a href="01.1_Computer_Basics.html">
+            
+                    
+                    Computer Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="01.2_Asm_Basics.html">
+            
+                <a href="01.2_Asm_Basics.html">
+            
+                    
+                    ASM Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="01.3_Debugging_ASM_pt1.html">
+            
+                <a href="01.3_Debugging_ASM_pt1.html">
+            
+                    
+                    Debugging ASM Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="01.4_DataTypesANDDebugging_pt2.html">
+            
+                <a href="01.4_DataTypesANDDebugging_pt2.html">
+            
+                    
+                    Data Types and Debugging Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="01.5_Adv_Types.html">
+            
+                <a href="01.5_Adv_Types.html">
+            
+                    
+                    Advanced Types and Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02_Basic_Operations/">
+            
+                <a href="../02_Basic_Operations/">
+            
+                    
+                    Basic Operations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02_Basic_Operations/02.1_Arithmetic_Instructions.html">
+            
+                <a href="../02_Basic_Operations/02.1_Arithmetic_Instructions.html">
+            
+                    
+                    Arithmetic Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02_Basic_Operations/02.2_The_Stack.html">
+            
+                <a href="../02_Basic_Operations/02.2_The_Stack.html">
+            
+                    
+                    The Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02_Basic_Operations/02.3_negative_bitwise.html">
+            
+                <a href="../02_Basic_Operations/02.3_negative_bitwise.html">
+            
+                    
+                    Negative Numbers Bitwise
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03_Control_Flow/">
+            
+                <a href="../03_Control_Flow/">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_Control_Flow/3.1_Flags.html">
+            
+                <a href="../03_Control_Flow/3.1_Flags.html">
+            
+                    
+                    Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                <a href="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Computer Basics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="section-11-computer-basics">Section 1.1: Computer Basics</h1>
+<p>Before we can understand assembly, we must first understand some computer basics. </p>
+<h2 id="computer-basics">Computer Basics:</h2>
+<h3 id="binary">Binary:</h3>
+<ul>
+<li>Binary simply means &quot;composed of, or involving two things.&quot; In our case, with computers, we are speaking of a data size called <em>bits</em>. Binary in relation to computers, in the most basic sense, represents &quot;on/1&quot;, &quot;off/0&quot;. When combining multiple bits, we can come up with larger data units that can represent more complex data such as numbers or text. </li>
+</ul>
+<h3 id="data-sizes">Data Sizes</h3>
+<p><img src="../imgs/bytesizes.gif" alt=""></p>
+<ul>
+<li><strong>Bits:</strong> Bits are the smallest unit of data a computer can offer. These are represented as a single binary value: 0 or 1. 8 bits equal a <em>byte</em></li>
+<li><strong>Bytes:</strong> <ul>
+<li>Bytes are a unit of information storage. </li>
+<li>They are a series of 8 bits. Though it&apos;s not as easy as just combining 8 bits together. </li>
+<li>Each bit represents a different number. When a bit in a byte is turned on, the overall numeric representation of the byte changes. </li>
+<li>Bytes are read from far right bit (least significant bit or LSB) to far left bit (most significant bit or MSB). </li>
+<li>Each bit (and all data on computers) are meassured in powers of 2</li>
+<li>These are the values of each bit: 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1  - with 128 being the MSB and 1 being the LSB.</li>
+<li>If all bits are turned on, the largest number we get is 256, giving us 256 unique &quot;patterns&quot; we can create. </li>
+<li>Bytes can be combined into larger information storage types:<ul>
+<li><strong>Kilobytes</strong> 2^10 = 1024 bytes</li>
+<li><strong>Megabytes</strong> 2^20 = 1,048,576 bytes</li>
+<li><strong>Gigabytes</strong> 2^30 = 1,073,741,824 bytes</li>
+<li><strong>Terabytes</strong> 2^40 = a huge number...</li>
+<li>and so on...</li>
+<li>Ever notice that a hard drive is smaller than advertised? Well, that&apos;s because the folks who create hard drives use 1000 kilobytes in a megabyte. It comes out to quite a difference in larger hard drives. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>We also have a few other data units such as Nibble (4 bits), Word (16 bits) and some others we will be going over later.<br><img src="../imgs/byte_prefixes.png" alt=""></li>
+</ul>
+<h2 id="hardware-components">Hardware Components</h2>
+<h5 id="cpu-central-processing-unit">CPU (Central Processing Unit):</h5>
+<p><img src="../imgs/cpu.jpg" alt=""></p>
+<ul>
+<li>The CPU is the electronic circuitry within a computer that carries out the instructions of a program by performing basic arithmetic, logical, control and input/output (I/O) operations specified by the instructions. In otherwords, the CPU is what&apos;s doing all of the &quot;thinking&quot;. This is the primary piece of hardware assembly acts on. Things that happen here are happening the fastest. This is also the centeral point in which we define speed... hardware farthest from this are slower. When we say <strong>registers</strong>, this is where we are talking about. </li>
+</ul>
+<h5 id="ram-random-access-memory">RAM (Random-Access Memory)</h5>
+<p><img src="../imgs/ram.jpeg" alt=""></p>
+<ul>
+<li>RAM is a form of computer data storage that stores data and machine code currently being used. This is the secondary piece of hardware assembly acts on. When we say we are accessing memory addresses, this is the location in the computer we are talking about.  </li>
+</ul>
+<h5 id="hddsdd-hard-disk-drive-solid-disk-drive">HDD/SDD (Hard Disk Drive/ Solid Disk Drive)</h5>
+<p><img src="../imgs/hddsdd.png" alt=""></p>
+<ul>
+<li>Disk drives are a data storage device which are non-volatile (meaning they retain stored data even when powered off). Disk drives are one of the farthest components from the CPU. They are much slower than CPU instructions or access to RAM... but they can hold much more data, even when not being used. There are two types of Disk Drives currently, Hard Disk Drives and Solid Disk Drives. HDDs rely on rotating disks and other additional moving mechanics to store data. Whereas an SDD does not have many moving parts, if any. Due to this, SSDs are faster and less prone to shock damage. Regardless, additional information about either type of disk drive isn&apos;t really helpful for this course. When we say file I/O... this is where we are talking about.</li>
+</ul>
+<h3 id="cpu-architecture">CPU Architecture</h3>
+<p>We won&apos;t get too far into this, but there are different CPU architectures that offer different register sizes and such. Some basic ones to keep in mind for now are: </p>
+<ul>
+<li>Intel x86(_64)</li>
+<li>Intel x86</li>
+<li>AMD x86</li>
+<li>AMD x86(_64)</li>
+<li>ARM</li>
+<li>PowerPC</li>
+</ul>
+<h5 id="additional-information">Additional Information</h5>
+<ul>
+<li><strong>x86</strong> refers to Intel&apos;s processor architecture that was used in PCs. It was a backwards compatable to 16-bit systems and currently supports up to 64 bit standard register sizes via the x64 extension. This is not including SIMD registers (which can be upwards of 512-bit). Don&apos;t worry too much about what registers are just yet. </li>
+<li><strong>x86(_64)</strong> is an extension for x86 that brought raised the register size from 32bit to 64bit. This was done to combat 32bit x86&apos;s processor limitations in memory addressing in an age where everyone else was on 64bit systems only. (Refer to history lesson below), x86(_64) provides backwards compatability while utilizing the performance advantage of 64 bit architectures. </li>
+</ul>
+<h5 id="a-history-of-copying">A History of Copying</h5>
+<ul>
+<li><p>As said above, x86 refers to Intel&apos;s processor architectures that was used in PCs (80186, 80386, 80486). Back in 1982, AMD actually was contracted by Intel to be a second-source manufacturer of the 8086 and 8088 Intel processors. AMD went on to develop it&apos;s own chip, the Am286. In 1984, Intel decided to no longer cooperate with AMD and refused to convey technical details of the Intel 80386 to AMD. In 1987, AMD invoked arbitration over the issue causing Intel to cancel their 1982 technological-exchange agreement altogether. AMD eventually won arbitration in 1992 cuasing Intel to dispute which led to a Supreme Court case in California who sided with AMD. </p>
+</li>
+<li><p>In 1990, Intel countersued AMD, forcing AMD to clean-room design versions of intel code for it&apos;s x386 and x486 processors... long after intel had released its own x386 in 1985. In March 1991, AMD released the Am386 which was a clone of the Intel 386 processor. This eventually led to an agreement between Intel and AMD where AMD received the rights to the microcode in Intel&apos;s x386 and x486 processor families, but not the rights to any processors that followed. </p>
+</li>
+<li><p>Fast forward, AMD eventually caught up to Intel, by the 2000&apos;s it became clear that 32-bit x86 processors were just not going to cut it in a time where 64 bit processors were coming out. So Intel attempted to create a backwards compatible 64bit/32bit processor, which failed. Then Intel decided to drop 32-bit all together, which failed. Finally, AMD decided to take another path of backwards compatibility that did not suffer the same high costs and performance issues as Intel&apos;s first attempt. In 2003, AMD released the first x86 processor with 64-bit general-purpose registers, the Opteron. This brought in additional capabilities such as accessing much more than 4GB of virtual memory using the new x86(_64) extension (also known as AMD64).</p>
+</li>
+<li><p>In July 2004, Intel responded with it&apos;s own x86(_64) processor, the Prescott Pentium 4. Which currently brings us to our CPU battles today. </p>
+</li>
+</ul>
+<h5 id="the-future">The Future</h5>
+<ul>
+<li><p>By 2020, Apple will be creating it&apos;s own CPUs. Apple has had a history of using PowerPC chips and now Intel chips. But it feels the CPU market is moving entirely too slow. </p>
+</li>
+<li><p>Most likely by 2019, Apple will entirely drop 32 bit support on it&apos;s operating systems. Apple is currently issuing out warning prompts saying &quot;App&quot; is not optmized for your Mac. With an even more urgent warning prompt on it&apos;s beta OS&apos;s. </p>
+</li>
+</ul>
+<h5 id="how-does-this-apply-to-us">How does this apply to us?</h5>
+<ul>
+<li>As we will get into here soon, different CPU Architectures will have different individual quarks and features that make them stand out. There are also different syntaxes that we will observe as well. But most importantly, we need to understand the different sizes of general purpose registers in correlation to the CPU Architecture. 64 bit CPUs for instance, will have more and larger general purpose registers whereas a 32 or 16 bit OS will only have registers up to that size. This will dictate which instructions we use and how we access different types of data. </li>
+</ul>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Assembly Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="01.2_Asm_Basics.html" class="navigation navigation-next " aria-label="Next page: ASM Basics">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Computer Basics","level":"1.2.1","depth":2,"next":{"title":"ASM Basics","level":"1.2.2","depth":2,"path":"01_Introduction/01.2_Asm_Basics.md","ref":"01_Introduction/01.2_Asm_Basics.md","articles":[]},"previous":{"title":"Assembly Introduction","level":"1.2","depth":1,"path":"01_Introduction/README.md","ref":"01_Introduction/README.md","articles":[{"title":"Computer Basics","level":"1.2.1","depth":2,"path":"01_Introduction/01.1_Computer_Basics.md","ref":"01_Introduction/01.1_Computer_Basics.md","articles":[]},{"title":"ASM Basics","level":"1.2.2","depth":2,"path":"01_Introduction/01.2_Asm_Basics.md","ref":"01_Introduction/01.2_Asm_Basics.md","articles":[]},{"title":"Debugging ASM Part 1","level":"1.2.3","depth":2,"path":"01_Introduction/01.3_Debugging_ASM_pt1.md","ref":"01_Introduction/01.3_Debugging_ASM_pt1.md","articles":[]},{"title":"Data Types and Debugging Part 2","level":"1.2.4","depth":2,"path":"01_Introduction/01.4_DataTypesANDDebugging_pt2.md","ref":"01_Introduction/01.4_DataTypesANDDebugging_pt2.md","articles":[]},{"title":"Advanced Types and Concepts","level":"1.2.5","depth":2,"path":"01_Introduction/01.5_Adv_Types.md","ref":"01_Introduction/01.5_Adv_Types.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01_Introduction/01.1_Computer_Basics.md","mtime":"2018-06-20T18:58:09.741Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T18:47:25.761Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
