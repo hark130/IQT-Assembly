@@ -1,0 +1,551 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Data Types and Debugging Part 2 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="01.5_Adv_Types.html" />
+    
+    
+    <link rel="prev" href="01.3_Debugging_ASM_pt1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    IQT Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Assembly Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01.1_Computer_Basics.html">
+            
+                <a href="01.1_Computer_Basics.html">
+            
+                    
+                    Computer Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="01.2_Asm_Basics.html">
+            
+                <a href="01.2_Asm_Basics.html">
+            
+                    
+                    ASM Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="01.3_Debugging_ASM_pt1.html">
+            
+                <a href="01.3_Debugging_ASM_pt1.html">
+            
+                    
+                    Debugging ASM Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="01.4_DataTypesANDDebugging_pt2.html">
+            
+                <a href="01.4_DataTypesANDDebugging_pt2.html">
+            
+                    
+                    Data Types and Debugging Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="01.5_Adv_Types.html">
+            
+                <a href="01.5_Adv_Types.html">
+            
+                    
+                    Advanced Types and Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02_Basic_Operations/">
+            
+                <a href="../02_Basic_Operations/">
+            
+                    
+                    Basic Operations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02_Basic_Operations/02.1_Arithmetic_Instructions.html">
+            
+                <a href="../02_Basic_Operations/02.1_Arithmetic_Instructions.html">
+            
+                    
+                    Arithmetic Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02_Basic_Operations/02.2_The_Stack.html">
+            
+                <a href="../02_Basic_Operations/02.2_The_Stack.html">
+            
+                    
+                    The Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02_Basic_Operations/02.3_negative_bitwise.html">
+            
+                <a href="../02_Basic_Operations/02.3_negative_bitwise.html">
+            
+                    
+                    Negative Numbers Bitwise
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03_Control_Flow/">
+            
+                <a href="../03_Control_Flow/">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_Control_Flow/3.1_Flags.html">
+            
+                <a href="../03_Control_Flow/3.1_Flags.html">
+            
+                    
+                    Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                <a href="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Data Types and Debugging Part 2</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="assembly-data-types-and-gdb-part-2">Assembly Data Types and GDB Part 2</h1>
+<ul>
+<li>When we think &quot;data types&quot;, we need to understand that in Assembly, it&apos;s a different concept than in higher level languages. Typically in Assembly, data types are just bytes in a buffer. &quot;Data type&quot; is just an interpretation that&apos;s differentiated by size, alignment and certain bits being set. </li>
+<li>Some operations preserve special properties in a given data set (such as sign, e.g. (+/-))</li>
+<li>Other operations may expect different alignments in data, or may have issues with certain values (like floating points)</li>
+</ul>
+<h3 id="x8664-general-data-sizes">X86(_64) General Data Sizes</h3>
+<ul>
+<li>Byte - smallest addressable unit (8 bit)</li>
+<li>Word - 2 bytes</li>
+<li>Dword - double word (4 bytes - x86 pointer width)</li>
+<li>Qword - quad word (8 bytes - x64 pointer width)</li>
+</ul>
+<h2 id="gdb-examining-memory">GDB: Examining Memory</h2>
+<ul>
+<li>We can use GDB to examine varius places in memory &quot;x&quot; (for &quot;eXamine&quot;)</li>
+<li>x has several options: <ul>
+<li>x/nfu - where n is the <em>Number</em> of things to examine, f is the <em>Format</em> and u is the <em>Unit</em> size</li>
+<li>x addr - examines the memory address typed in by the user</li>
+<li>x $<register> - examines the memory address pointed to by the register</register></li>
+</ul>
+</li>
+</ul>
+<h3 id="gdb-formatting">GDB Formatting</h3>
+<ul>
+<li>The &quot;f&quot; in x/nfu stands for formatting as we stated above</li>
+<li>Format options include:<ul>
+<li>s - For a NULL-terminated string</li>
+<li>i - For a machine instruction</li>
+<li>x - for a hexadecimal (the default, which changes when x is used)</li>
+</ul>
+</li>
+<li>For example: Disassembling at RIP</li>
+</ul>
+<pre><code>(gdb) x/i $rip
+</code></pre><h3 id="gdb-unit-sizes">GDB Unit Sizes</h3>
+<ul>
+<li>The &quot;u&quot; in x/nfu stands for Unit Size as we stated above</li>
+<li>Unit size options are a bit confusing in the context of x86/(_64) assembly and include: <ul>
+<li>b - bytes</li>
+<li>h - halfwords (equivalent to &quot;word&quot; in x86(_64) asm; e.g., 2 bytes)</li>
+<li>w - words (4 bytes, equivalent to dwords)</li>
+<li>g - giant words (8 bytes, equivalent to qwords)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="sub-registers">Sub Registers</h2>
+<ul>
+<li>Subregisters are a part of the bigger &quot;parent&quot; register</li>
+<li>Unless special instructions (not yet mentioned) are used, will not modify data in the other portions of the register when used. </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"><strong>64bit</strong></th>
+<th style="text-align:left"><strong>32bit</strong></th>
+<th style="text-align:left"><strong>16bit</strong></th>
+<th><strong>8bit high/low</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">rax</td>
+<td style="text-align:left">eax</td>
+<td style="text-align:left">ax</td>
+<td>ah/al</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">rcx</td>
+<td style="text-align:left">ecx</td>
+<td style="text-align:left">cx</td>
+<td>ch/cl</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">rdx</td>
+<td style="text-align:left">edx</td>
+<td style="text-align:left">dx</td>
+<td>dh/dl</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">rdi</td>
+<td style="text-align:left">edi</td>
+<td style="text-align:left">N/A</td>
+<td>N/A</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">rsi</td>
+<td style="text-align:left">esi</td>
+<td style="text-align:left">N/A</td>
+<td>N/A</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="memoryregister-access---mov">Memory/Register Access - mov</h3>
+<ul>
+<li>When <strong>accessing memory</strong>, the amount of data to copy can be specified:</li>
+</ul>
+<pre><code class="lang-nasm">mov al, byte [rsi]      ; copy a single byte
+mov eax, dword [rcx]    ; copy a dword (4 bytes)
+mov rax, qword [rsi]    ; copy a qword (8 bytes)
+</code></pre>
+<p><em>Notice the register/subregisters used? They match the size of data we are copying.</em></p>
+<ul>
+<li>Also, data can be copied from subregister to subregister:</li>
+</ul>
+<pre><code class="lang-nasm">mov al, cl      ; copy from cl to al
+xchg al, ah      ; exchange the low and high bytes in ax
+</code></pre>
+<h3 id="register-access---movzx">Register Access - movzx</h3>
+<ul>
+<li><strong>movzx</strong> stands for &quot;Move with zero extend&quot;. When moving source data that is smaller than the destination size, zero out the remaining bits. </li>
+<li>Basic use:</li>
+</ul>
+<pre><code class="lang-nasm">movzx rax, cl                   ; everything above al is now set to 0
+movzx rax, byte [rsi + 5]       ; what happens here?
+</code></pre>
+<p><em>DID YOU KNOW? The first letter in &quot;al&quot; represents the middle letter in the 64 and 32 bit register... rax/eax. The second letter, &apos;l&apos;, stands for low (or &apos;h&apos; high). This applies to all registers and subregisters. rCx = ch/cl. rDx = dh/dl. etc. 16bit registers always end in &apos;x&apos; and start with their parents middle letter. rax/eax = ax. rcx/ecx = cx, etc. This should make it easier to remember the subregisters of the parent register!</em></p>
+<h2 id="lab2">Lab2</h2>
+<p>Proceed to the Lab2 directory and follow instructions</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01.3_Debugging_ASM_pt1.html" class="navigation navigation-prev " aria-label="Previous page: Debugging ASM Part 1">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="01.5_Adv_Types.html" class="navigation navigation-next " aria-label="Next page: Advanced Types and Concepts">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Data Types and Debugging Part 2","level":"1.2.4","depth":2,"next":{"title":"Advanced Types and Concepts","level":"1.2.5","depth":2,"path":"01_Introduction/01.5_Adv_Types.md","ref":"01_Introduction/01.5_Adv_Types.md","articles":[]},"previous":{"title":"Debugging ASM Part 1","level":"1.2.3","depth":2,"path":"01_Introduction/01.3_Debugging_ASM_pt1.md","ref":"01_Introduction/01.3_Debugging_ASM_pt1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01_Introduction/01.4_DataTypesANDDebugging_pt2.md","mtime":"2018-07-09T15:04:20.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T18:47:25.761Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

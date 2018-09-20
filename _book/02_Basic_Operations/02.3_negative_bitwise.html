@@ -1,0 +1,731 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Negative Numbers Bitwise · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../03_Control_Flow/" />
+    
+    
+    <link rel="prev" href="02.2_The_Stack.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    IQT Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01_Introduction/">
+            
+                <a href="../01_Introduction/">
+            
+                    
+                    Assembly Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01_Introduction/01.1_Computer_Basics.html">
+            
+                <a href="../01_Introduction/01.1_Computer_Basics.html">
+            
+                    
+                    Computer Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01_Introduction/01.2_Asm_Basics.html">
+            
+                <a href="../01_Introduction/01.2_Asm_Basics.html">
+            
+                    
+                    ASM Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01_Introduction/01.3_Debugging_ASM_pt1.html">
+            
+                <a href="../01_Introduction/01.3_Debugging_ASM_pt1.html">
+            
+                    
+                    Debugging ASM Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01_Introduction/01.4_DataTypesANDDebugging_pt2.html">
+            
+                <a href="../01_Introduction/01.4_DataTypesANDDebugging_pt2.html">
+            
+                    
+                    Data Types and Debugging Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01_Introduction/01.5_Adv_Types.html">
+            
+                <a href="../01_Introduction/01.5_Adv_Types.html">
+            
+                    
+                    Advanced Types and Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Basic Operations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="02.1_Arithmetic_Instructions.html">
+            
+                <a href="02.1_Arithmetic_Instructions.html">
+            
+                    
+                    Arithmetic Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02.2_The_Stack.html">
+            
+                <a href="02.2_The_Stack.html">
+            
+                    
+                    The Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="02.3_negative_bitwise.html">
+            
+                <a href="02.3_negative_bitwise.html">
+            
+                    
+                    Negative Numbers Bitwise
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03_Control_Flow/">
+            
+                <a href="../03_Control_Flow/">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_Control_Flow/3.1_Flags.html">
+            
+                <a href="../03_Control_Flow/3.1_Flags.html">
+            
+                    
+                    Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                <a href="../03_Control_Flow/3.2_Control_Flow.html">
+            
+                    
+                    Control Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Negative Numbers Bitwise</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="negative-numbers-and-bitwise">Negative Numbers and Bitwise</h1>
+<h2 id="negative-numbers">Negative Numbers</h2>
+<h3 id="twos-complement">Two&apos;s Complement</h3>
+<ul>
+<li>You may remember this from C, we touched on it slightly. </li>
+<li>Negative numbers of the x86(_64) platform are represented via Two&apos;s Complement</li>
+<li>In short, two&apos;s complement is just a way to tell between negative and positive numbers on the binary level</li>
+<li>Positive numbers remain mostly unchanged from what we have learned in previous courses. 0011 for instance is 3. </li>
+<li>Negative numbers on the other hand use the &quot;complement&quot; of positive numbers. So instead of starting at 0000... negative numbers start at 1111. The 1s and 0s are flipped. </li>
+<li>If the left most bit is 0, then the number is positive. 1 is negative. </li>
+</ul>
+<hr>
+<ul>
+<li>To get the negative version of a number... take the positive number, subtract by 1, then invert. </li>
+<li><p>This may be hard to understand at first, but let&apos;s look at it via positive numbers first. Use the decimal to bin chart below as reference.  </p>
+<ul>
+<li>3 = 0011</li>
+<li>Let&apos;s get -3</li>
+<li>Subtract 1 from 3 (3-1= 2)  (2 = 0010)</li>
+<li>Invert: -3 = (1101) aka 0010 inverted is 1101</li>
+</ul>
+</li>
+<li><p><strong>Let&apos;s take a look at another example!</strong></p>
+<ul>
+<li>4 = 0100 (we want -4)</li>
+<li>Subtract 1: 3 = 0011</li>
+<li>Invert: 1100 = -4</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Decimal</strong></th>
+<th style="text-align:left"><strong>Positive Bin</strong></th>
+<th style="text-align:left"><strong>Negative Bin</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0001</td>
+<td style="text-align:left">1111</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">0010</td>
+<td style="text-align:left">1110</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">0011</td>
+<td style="text-align:left">1101</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">0100</td>
+<td style="text-align:left">1100</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="twos-complement-pros">Two&apos;s Complement Pros</h3>
+<ul>
+<li>Simplified addition operations</li>
+<li><p>Unified add/sub</p>
+</li>
+<li><p><strong>Example: Adding 2 and -1</strong></p>
+</li>
+</ul>
+<pre><code>Carry Row:    11
+              1111
+            + 0010
+              ----
+              0001
+</code></pre><h3 id="twos-complement-cons">Two&apos;s Complement Cons</h3>
+<h2 id="there-arent-too-many-downsides-to-twos-complement-the-biggest-downside-is-that-signed-numbers-have-a-smaller-range-in-order-to-account-for-the-extra-bit-that-determines-sign-">* There aren&apos;t too many downsides to Two&apos;s Complement. The biggest downside, is that signed numbers have a smaller range in order to account for the extra bit that determines sign. </h2>
+<h2 id="sub-registers-and-sign-extending">Sub Registers and Sign Extending</h2>
+<ul>
+<li>When copying smaller data into a register, sign extending may be used (rather than zero extending)</li>
+<li>Sign extending preserves the &quot;signed&quot; attributes of the data being copied</li>
+<li>The movsx instruction (just like movzx) handles this</li>
+</ul>
+<h3 id="the-movsx-instruction">The movsx Instruction</h3>
+<ul>
+<li><strong>movsx</strong></li>
+<li><strong>Description</strong><ul>
+<li>Must like movzx, movsx can be used to move data into a portion of a larger register, while preserving its sign</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="bitwise-operations">Bitwise Operations</h2>
+<h3 id="bit-shifting">Bit Shifting</h3>
+<ul>
+<li><strong>Two unsigned shift operations:</strong><ul>
+<li><strong>shl</strong> - shift left</li>
+<li><strong>shr</strong> - shift right</li>
+</ul>
+</li>
+<li>Shifting moves the bits in the register over the direction (left or right) and number of bits specified</li>
+<li>Bits that fall off the end (and overflow) will disappear, except for the last one, which ends up in the carry flag (more to come on this)</li>
+<li>Extra space is padded with 0&apos;s</li>
+</ul>
+<h4 id="left-shift">Left Shift</h4>
+<ul>
+<li>The following snippet of assembly:</li>
+</ul>
+<pre><code class="lang-nasm">mov rax, 1
+shl rax, 1
+shl rax, 3
+</code></pre>
+<ul>
+<li>Can be modeled by the following table:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Decimal</strong></th>
+<th style="text-align:left"><strong>Binary</strong></th>
+<th style="text-align:left"><strong>State</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">00000001</td>
+<td style="text-align:left">Initial</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">00000010</td>
+<td style="text-align:left">shl rax, 1</td>
+</tr>
+<tr>
+<td style="text-align:left">16</td>
+<td style="text-align:left">00010000</td>
+<td style="text-align:left">shl rax, 3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="right-shift">Right Shift</h4>
+<ul>
+<li>Similarly, the following snippet of assembly:</li>
+</ul>
+<pre><code class="lang-nasm">mov rax, 32
+shr rax, 1
+shr rax, 4
+</code></pre>
+<ul>
+<li>Can be modeled by the following table:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Decimal</strong></th>
+<th style="text-align:left"><strong>Binary</strong></th>
+<th style="text-align:left"><strong>State</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">32</td>
+<td style="text-align:left">00100000</td>
+<td style="text-align:left">Initial</td>
+</tr>
+<tr>
+<td style="text-align:left">16</td>
+<td style="text-align:left">00010000</td>
+<td style="text-align:left">shr rax, 1</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">00000001</td>
+<td style="text-align:left">shr rax, 3</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="binary-andor">Binary and/or</h3>
+<ul>
+<li><strong>and</strong> can be used to determine whether or not one or more bits are set on</li>
+<li><strong>or</strong> will tell you if the bit is set on at least one place</li>
+<li>Both take two operands, left will hold the result after the operation completes</li>
+<li>Use:</li>
+</ul>
+<pre><code class="lang-nasm">mov rax, 1              ; rax contains 00000001
+mov rcx, 5              ; rcx contains 00000101
+
+and rax, rcx            ; rax contains 00000001
+or rax, rcx             ; rax contains 00000101
+</code></pre>
+<h4 id="and-table">And Table</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Set</strong></th>
+<th style="text-align:left"><strong>Binary</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">First</td>
+<td style="text-align:left">01010011</td>
+</tr>
+<tr>
+<td style="text-align:left">Second</td>
+<td style="text-align:left">01000010</td>
+</tr>
+<tr>
+<td style="text-align:left">Result</td>
+<td style="text-align:left">01000010</td>
+</tr>
+</tbody>
+</table>
+<h4 id="or-table">Or Table</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Set</strong></th>
+<th style="text-align:left"><strong>Binary</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">First</td>
+<td style="text-align:left">01010011</td>
+</tr>
+<tr>
+<td style="text-align:left">Second</td>
+<td style="text-align:left">01001010</td>
+</tr>
+<tr>
+<td style="text-align:left">Result</td>
+<td style="text-align:left">01011010</td>
+</tr>
+</tbody>
+</table>
+<h3 id="binary-not">Binary Not</h3>
+<ul>
+<li>Inverts the bits in a given register</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="lang-nasm">mov rax, 0              ; rax now contains 00000000
+not rax                 ; rax is now all 1&apos;s (or 0xffffffff)
+</code></pre>
+<ul>
+<li>Similarly: </li>
+</ul>
+<pre><code class="lang-nasm">mov rcx, 1              ; rcx now contains 1 (8bit: 00000001)
+not rcx                 ; rcx now contains 0xfffffffe (8bit: 11111110)
+</code></pre>
+<h3 id="xor">XOR</h3>
+<ul>
+<li><strong>XOR</strong> yields 1 only if the bit is set in either the source or the destination, but not both</li>
+<li>Any value XOR&apos;d with itself is 0 (Make sense now?)</li>
+<li>0 XOR&apos;d with any value is that value</li>
+<li>For numbers A, B and C, if A ^ B = C, then C ^ A = B, C ^ B = A</li>
+</ul>
+<h4 id="xor-table">XOR Table</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Assembly</strong></th>
+<th style="text-align:left"><strong>First Value</strong></th>
+<th style="text-align:left"><strong>Second Value</strong></th>
+<th style="text-align:left"><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">xor rax, rax</td>
+<td style="text-align:left">01010011</td>
+<td style="text-align:left">01010011</td>
+<td style="text-align:left">00000000</td>
+</tr>
+<tr>
+<td style="text-align:left">xor rax, rcx</td>
+<td style="text-align:left">01000010</td>
+<td style="text-align:left">01001010</td>
+<td style="text-align:left">00001000</td>
+</tr>
+<tr>
+<td style="text-align:left">xor rcx, rax</td>
+<td style="text-align:left">01001010</td>
+<td style="text-align:left">00001000</td>
+<td style="text-align:left">01000010</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rotating-bits">Rotating Bits</h3>
+<ul>
+<li>The values in the register are rotated the indicated number of places to the right or left</li>
+<li>Bits that are rotated off the end of the register are moved back to the other side. </li>
+<li><strong>Instruction:</strong></li>
+</ul>
+<pre><code class="lang-nasm">mov rax, 1      ; rax contains 1 (00000001)
+rol rax, 1      ; rax contains 2 (00000010)
+ror rax, 1      ; rax contains 1 (00000001)
+ror rax, 1      ; rax now looks like (10000000)
+</code></pre>
+<h3 id="signed-bit-operations">Signed Bit Operations</h3>
+<ul>
+<li>Shift operations that are signed aware exist (SAR for right and SAL for left)</li>
+<li>Work in the same fashion as shr/shl, except for how bits shifted off the end are treated (bits still disappear, but the sign of the resulting value is retained)</li>
+</ul>
+<hr>
+<h2 id="lab-5">Lab 5</h2>
+<ul>
+<li>Proceed to lab5</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02.2_The_Stack.html" class="navigation navigation-prev " aria-label="Previous page: The Stack">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../03_Control_Flow/" class="navigation navigation-next " aria-label="Next page: Control Flow">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Negative Numbers Bitwise","level":"1.3.3","depth":2,"next":{"title":"Control Flow","level":"1.4","depth":1,"path":"03_Control_Flow/README.md","ref":"03_Control_Flow/README.md","articles":[{"title":"Flags","level":"1.4.1","depth":2,"path":"03_Control_Flow/3.1_Flags.md","ref":"03_Control_Flow/3.1_Flags.md","articles":[]},{"title":"Control Flow","level":"1.4.2","depth":2,"path":"03_Control_Flow/3.2_Control_Flow.md","ref":"03_Control_Flow/3.2_Control_Flow.md","articles":[]}]},"previous":{"title":"The Stack","level":"1.3.2","depth":2,"path":"02_Basic_Operations/02.2_The_Stack.md","ref":"02_Basic_Operations/02.2_The_Stack.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02_Basic_Operations/02.3_negative_bitwise.md","mtime":"2018-08-02T18:30:18.138Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T18:47:25.761Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
