@@ -8,7 +8,7 @@ section .text
 _copy_string:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
-;	This method takes 3 params:
+;	This method takes 2 params:
 ;
 ;	Param 1: An empty buffer
 ;
